@@ -62,7 +62,7 @@ namespace mongo {
         case LL_SEVERE:
             return LOG_CRIT;
         default:
-            return LL_INFO;
+            return LOG_INFO;
         }
     }
 #endif
@@ -237,7 +237,7 @@ namespace mongo {
             cout << "using syslog ident: " << name << endl;
             
             // openlog requires heap allocated non changing pointer
-            // this should only be called once per pragram execution
+            // this should only be called once per program execution
 
             char * newName = (char *) malloc( strlen(name) + 1 );
             strcpy( newName , name);
