@@ -254,6 +254,9 @@ namespace mongo {
         for ( unsigned ii = 0; ii < _nodes.size(); ii++ ) {
             _nextSlave = ( _nextSlave + 1 ) % _nodes.size();
             if ( _nextSlave != _master ) {
+                if ( !_nodes[ _nextSlave].okPingAndQueue() ) {
+                  LOG(1) << "dbclient_rs okPingAndQueue false " << _nodes[_nextSlave] << endl;
+                }
                 if ( _nodes[ _nextSlave ].okForSecondaryQueries() )
                     return _nodes[ _nextSlave ].addr;
                 LOG(2) << "dbclient_rs getSlave not selecting " << _nodes[_nextSlave] << ", not currently okForSecondaryQueries" << endl;
