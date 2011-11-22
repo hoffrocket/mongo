@@ -143,11 +143,11 @@ namespace mongo {
         struct Node {
             Node( const HostAndPort& a , DBClientConnection* c ) 
                 : addr( a ) , conn(c) , ok(true) , 
-                  ismaster(false), secondary( false ) , hidden( false ) , pingTimeMillis(0) {
+                  ismaster(false), secondary( false ) , hidden( false ) , pingTimeMillis(0), queueSize(0) {
             }
 
             bool okForSecondaryQueries() const {
-                return ok && secondary && ! hidden;
+                return ok && secondary && ! hidden && (pingTimeMillis < 100) && (queueSize < 20);
             }
 
             BSONObj toBSON() const {
@@ -178,6 +178,7 @@ namespace mongo {
             bool hidden;
             
             int pingTimeMillis;
+            int queueSize;
 
         };
 
