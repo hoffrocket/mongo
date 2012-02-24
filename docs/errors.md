@@ -608,31 +608,32 @@ db/lasterror.cpp
 
 db/matcher.cpp
 ----
-* 10066 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L335) $where may only appear once in query
-* 10067 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L336) $where query, but no script engine
-* 10068 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L204) invalid operator: 
-* 10069 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L291) BUG - can't operator for: 
-* 10070 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L923) $where compile error
-* 10071 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L938) 
-* 10072 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L942) unknown error in invocation of $where function
+* 10066 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L337) $where may only appear once in query
+* 10067 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L338) $where query, but no script engine
+* 10068 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L206) invalid operator: 
+* 10069 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L293) BUG - can't operator for: 
+* 10070 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L934) $where compile error
+* 10071 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L949) 
+* 10072 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L953) unknown error in invocation of $where function
 * 10073 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L106) mod can't be 0
 * 10341 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L88) scope has to be created first!
-* 10342 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L1093) pcre not compiled with utf8 support
+* 10342 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L1104) pcre not compiled with utf8 support
 * 12517 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L113) $elemMatch needs an Object
-* 13020 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L168) with $all, can't mix $elemMatch and others
-* 13021 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L600) $all/$elemMatch needs to be applied to array
-* 13029 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L282) can't use $not with $options, use BSON regex type instead
-* 13030 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L385) $not cannot be empty
-* 13031 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L395) invalid use of $not
-* 13032 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L271) can't use $not with $regex, use BSON regex type instead
-* 13086 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L297) $and/$or/$nor must be a nonempty array
-* 13087 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L301) $and/$or/$nor match element must be an object
-* 13089 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L337) no current client needed for $where
-* 13276 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L229) $in needs an array
-* 13277 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L240) $nin needs an array
-* 13629 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L327) can't have undefined in a query expression
-* 14844 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L421) $atomic specifier must be a top level field
-* 15882 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L160) $elemMatch not allowed within $in
+* 13020 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L170) with $all, can't mix $elemMatch and others
+* 13021 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L610) $all/$elemMatch needs to be applied to array
+* 13029 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L284) can't use $not with $options, use BSON regex type instead
+* 13030 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L387) $not cannot be empty
+* 13031 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L397) invalid use of $not
+* 13032 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L273) can't use $not with $regex, use BSON regex type instead
+* 13086 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L299) $and/$or/$nor must be a nonempty array
+* 13087 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L303) $and/$or/$nor match element must be an object
+* 13089 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L339) no current client needed for $where
+* 13276 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L231) $in needs an array
+* 13277 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L242) $nin needs an array
+* 13629 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L329) can't have undefined in a query expression
+* 14844 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L423) $atomic specifier must be a top level field
+* 15882 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L162) $elemMatch not allowed within $in
+* 16061 [code](http://github.com/mongodb/mongo/blob/master/db/matcher.cpp#L127) $hash needs a String
 
 
 db/mongommf.cpp
@@ -741,56 +742,61 @@ db/ops/update.cpp
 * 10137 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L287) $bit can only be applied to numbers
 * 10138 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L288) $bit cannot update a value of type double
 * 10139 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L296) $bit field must be number
-* 10140 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L406) Cannot apply $inc modifier to non-number
-* 10141 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L428) Cannot apply $push/$pushAll modifier to non-array
-* 10142 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L434) Cannot apply $pull/$pullAll modifier to non-array
-* 10143 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L455) Cannot apply $pop modifier to non-array
-* 10145 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L667) LEFT_SUBFIELD only supports Object: " << field << " not: 
-* 10147 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L805) Invalid modifier specified: 
-* 10148 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L817) Mod on _id not allowed", strcmp( fieldName, "_id
-* 10149 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L818) Invalid mod field name, may not end in a period
-* 10150 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L819) Field name duplication not allowed with modifiers
-* 10151 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L820) have conflicting mods in update
-* 10152 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L821) Modifier $inc allowed for numbers only
-* 10153 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L822) Modifier $pushAll/pullAll allowed for arrays only
-* 10154 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L898) Modifiers and non-modifiers cannot be mixed
-* 10155 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1362) cannot update reserved $ collection
-* 10156 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1365) cannot update system collection: " << ns << " q: " << patternOrig << " u: 
-* 10157 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1207) multi-update requires all modified objects to have an _id
-* 10158 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1317) multi update only works with $ operators
-* 10159 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1348) multi update only works with $ operators
-* 10399 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L712) ModSet::createNewFromMods - RIGHT_SUBFIELD should be impossible
-* 10400 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L715) unhandled case
-* 12522 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L969) $ operator made object too large
-* 12591 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L461) Cannot apply $addToSet modifier to non-array
+* 10140 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L438) Cannot apply $inc modifier to non-number
+* 10141 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L460) Cannot apply $push/$pushAll modifier to non-array
+* 10142 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L466) Cannot apply $pull/$pullAll modifier to non-array
+* 10143 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L487) Cannot apply $pop modifier to non-array
+* 10145 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L699) LEFT_SUBFIELD only supports Object: " << field << " not: 
+* 10147 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L837) Invalid modifier specified: 
+* 10148 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L849) Mod on _id not allowed", strcmp( fieldName, "_id
+* 10149 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L850) Invalid mod field name, may not end in a period
+* 10150 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L851) Field name duplication not allowed with modifiers
+* 10151 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L852) have conflicting mods in update
+* 10152 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L853) Modifier $inc allowed for numbers only
+* 10153 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L854) Modifier $pushAll/pullAll allowed for arrays only
+* 10154 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L930) Modifiers and non-modifiers cannot be mixed
+* 10155 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1394) cannot update reserved $ collection
+* 10156 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1397) cannot update system collection: " << ns << " q: " << patternOrig << " u: 
+* 10157 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1239) multi-update requires all modified objects to have an _id
+* 10158 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1349) multi update only works with $ operators
+* 10159 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1380) multi update only works with $ operators
+* 10399 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L744) ModSet::createNewFromMods - RIGHT_SUBFIELD should be impossible
+* 10400 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L747) unhandled case
+* 12522 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L1001) $ operator made object too large
+* 12591 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L493) Cannot apply $addToSet modifier to non-array
 * 12592 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L138) $addToSet can only be applied to an array
-* 13339 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L927) cursor dropped during update
-* 13478 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L601) can't apply mod in place - shouldn't have gotten here
-* 13479 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L829) invalid mod field name, target may not be empty
-* 13480 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L830) invalid mod field name, source may not begin or end in period
-* 13481 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L831) invalid mod field name, target may not begin or end in period
-* 13482 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L832) $rename affecting _id not allowed
-* 13483 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L833) $rename affecting _id not allowed
-* 13484 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L834) field name duplication not allowed with $rename target
-* 13485 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L835) conflicting mods not allowed with $rename target
-* 13486 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L836) $rename target may not be a parent of source
-* 13487 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L837) $rename source may not be dynamic array", strstr( fieldName , ".$
-* 13488 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L838) $rename target may not be dynamic array", strstr( target , ".$
-* 13489 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L378) $rename source field invalid
-* 13490 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L389) $rename target field invalid
-* 13494 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L825) $rename target must be a string
-* 13495 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L827) $rename source must differ from target
-* 13496 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L828) invalid mod field name, source may not be empty
+* 13339 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L959) cursor dropped during update
+* 13478 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L633) can't apply mod in place - shouldn't have gotten here
+* 13479 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L861) invalid mod field name, target may not be empty
+* 13480 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L862) invalid mod field name, source may not begin or end in period
+* 13481 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L863) invalid mod field name, target may not begin or end in period
+* 13482 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L864) $rename affecting _id not allowed
+* 13483 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L865) $rename affecting _id not allowed
+* 13484 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L866) field name duplication not allowed with $rename target
+* 13485 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L867) conflicting mods not allowed with $rename target
+* 13486 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L868) $rename target may not be a parent of source
+* 13487 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L869) $rename source may not be dynamic array", strstr( fieldName , ".$
+* 13488 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L870) $rename target may not be dynamic array", strstr( target , ".$
+* 13489 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L410) $rename source field invalid
+* 13490 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L421) $rename target field invalid
+* 13494 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L857) $rename target must be a string
+* 13495 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L859) $rename source must differ from target
+* 13496 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L860) invalid mod field name, source may not be empty
+* 15919 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L335) $pushMax needs an object
+* 15920 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L336) $pushMax can only be applied to an array
+* 15921 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L344) $pushMax.max must be set to a positive integer
+* 15922 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L345) $pushMax.data must be set
 * 9016 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L312) unknown $bit operation: 
-* 9017 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L337) 
+* 9017 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.cpp#L369) 
 
 
 db/ops/update.h
 ----
-* 10161 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L379) Invalid modifier specified 
-* 12527 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L245) not okForStorage
-* 13492 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L270) mod must be RENAME_TO type
-* 9015 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L621) 
+* 10161 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L382) Invalid modifier specified 
+* 12527 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L246) not okForStorage
+* 13492 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L271) mod must be RENAME_TO type
+* 15923 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L602) $pushMax.data must be set
+* 9015 [code](http://github.com/mongodb/mongo/blob/master/db/ops/update.h#L633) 
 
 
 db/pdfile.cpp
