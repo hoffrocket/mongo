@@ -69,6 +69,7 @@ check( {i:{$not:{$gt:"a"}}}, null, 0 );
 check( {i:{$not:{$gt:"c"}}}, ["a","b"] );
 check( {i:{$not:{$all:["a","b"]}}}, null, 0 );
 check( {i:{$not:{$all:["c"]}}}, ["a","b"] );
+check( {i:{$not:{$hash:"d609528b8ba785f157ab1f9fb2ee5b3e"}}}, null, 0 );
 
 t.remove( {} );
 t.save( {i:{j:"a"}} );

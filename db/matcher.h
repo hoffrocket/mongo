@@ -73,6 +73,7 @@ namespace mongo {
         int _mod;
         int _modm;
         BSONType _type;
+        string _hash;
 
         shared_ptr<Matcher> _subMatcher;
         bool _subMatcherOnPrimitives ;

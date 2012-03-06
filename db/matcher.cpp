@@ -122,6 +122,11 @@ namespace mongo {
                 _subMatcherOnPrimitives = true;
             }
         }
+        else if ( op == BSONObj::opHASH ) {
+            BSONElement m = e;
+            uassert( 16061 , "$hash needs a String" , m.type() == String );
+            _hash = m.str();
+        }
     }
 
     ElementMatcher::ElementMatcher( BSONElement e , int op , const BSONObj& array, bool isNot )
@@ -240,6 +245,7 @@ namespace mongo {
             break;
         case BSONObj::opMOD:
         case BSONObj::opTYPE:
+        case BSONObj::opHASH:
         case BSONObj::opELEM_MATCH: {
             shared_ptr< BSONObjBuilder > b( new BSONObjBuilder() );
             _builders.push_back( b );
@@ -545,6 +551,14 @@ namespace mongo {
         if ( op == BSONObj::opTYPE ) {
             return bm._type == l.type();
         }
+        
+        if ( op == BSONObj::opHASH ) {
+            if ( l.type() == Array || l.type() == Object ) {
+                return bm._hash == l.embeddedObject().md5();
+            } else {
+                return 0;
+            }
+        }
 
         /* check LT, GTE, ... */
         if ( l.canonicalType() != r.canonicalType() )
@@ -751,11 +765,12 @@ namespace mongo {
              	return retExistsFound( em );   
             }
         }
-        else if ( ( e.type() != Array || indexed || compareOp == BSONObj::opSIZE ) &&
-                  valuesMatch(e, toMatch, compareOp, em ) ) {
+        else if ( ( e.type() != Array || indexed || compareOp == BSONObj::opSIZE 
+                  || compareOp == BSONObj::opHASH ) && valuesMatch(e, toMatch, compareOp, em ) ) {
             return 1;
         }
-        else if ( e.type() == Array && compareOp != BSONObj::opSIZE ) {
+        else if ( e.type() == Array && compareOp != BSONObj::opSIZE 
+                  && compareOp != BSONObj::opHASH ) {
             BSONObjIterator ai(e.embeddedObject());
 
             while ( ai.moreWithEOO() ) {

@@ -118,6 +118,15 @@ namespace MatcherTests {
             ASSERT( !m.matches( fromjson( "{a:[[1,2,3,4]]}" ) ) );
         }
     };
+    
+    class Hash {
+    public:
+        void run() {
+            Matcher m( fromjson( "{a:{$hash:'b3167018b90fee96e8914eb693dafda2'}}" ) );
+            ASSERT( m.matches( fromjson( "{a:{'foo':'bar'}}" ) ) );
+            ASSERT( !m.matches( fromjson( "{a:{'bar':'foo'}}" ) ) );
+        }
+    };
 
 
     class TimingBase {

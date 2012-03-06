@@ -292,6 +292,8 @@ namespace mongo {
                 return BSONObj::opOPTIONS;
             else if ( fn[1] == 'w' && fn[2] == 'i' && fn[3] == 't' && fn[4] == 'h' && fn[5] == 'i' && fn[6] == 'n' && fn[7] == 0 )
                 return BSONObj::opWITHIN;
+            else if ( fn[1] == 'h' && fn[2] == 'a' && fn[3] == 's' && fn[4] == 'h' )
+                return BSONObj::opHASH;
         }
         return def;
     }
