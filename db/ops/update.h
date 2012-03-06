@@ -465,6 +465,7 @@ namespace mongo {
         const char * fixedOpName;
         BSONElement * fixed;
         int pushStartSize;
+        string pushHashValue;
 
         BSONType incType;
         int incint;
@@ -676,7 +677,9 @@ namespace mongo {
             for ( ModStateHolder::const_iterator i = _mods.begin(); i != _mods.end(); i++ ) {
                 const ModState& m = i->second;
                 if ( m.m->arrayDep() ) {
-                    if ( m.pushStartSize == -1 )
+                    if ( m.pushHashValue.size() > 0 ) {
+                        b <<  m.fieldName() << BSON( "$hash" << m.pushHashValue );
+                    } else if ( m.pushStartSize == -1 )
                         b.appendNull( m.fieldName() );
                     else
                         b << m.fieldName() << BSON( "$size" << m.pushStartSize );

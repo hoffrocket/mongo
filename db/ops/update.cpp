@@ -356,10 +356,9 @@ namespace mongo {
               maxDiff++;
           }
 
-          ms.pushStartSize = n;
-
           bb.appendAs( toPush ,  bb.numStr( n ) );
-          bb.done();
+          BSONObj newArrayObj = bb.done();
+          ms.pushHashValue = newArrayObj.md5();
           break;
         }
 
